@@ -1,0 +1,58 @@
+.education__container {
+    padding: 2.5rem 3.5rem 3.5rem;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .education-vocational__container, .education-courses__container {
+        display: flex;
+        height: 30rem;
+        align-items: center;
+        gap: 1.5rem;
+        transform: scaleY(0);
+        transition: transform 0.7s;
+
+        .education {
+            border: 1px solid lightblue;
+            background: rgba(185, 228, 255, 0.1);
+            border-radius: 7px;
+            height: 90%;
+            width: 50%;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.7rem;
+
+            p {
+                padding-top: 0.5rem;
+
+                span {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .education-vocational__container.show, .education-courses__container.show {
+        transform: scaleY(1);
+    }
+
+    .education-vocational__h-wrapper, .education-courses__h-wrapper {
+        border-width: 1px 0px 1px 1px;
+        border-style: solid;
+        width: 25rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+        border-image: linear-gradient(to right, rgb(97, 97, 97) 5%, #ffffff00);
+        border-image-slice: 1;
+
+        h4 {
+            color: #303030;
+            text-shadow: 2px 2px 5px #5c5c5c;
+            font-size: 1.3rem;
+        }
+    }
+}

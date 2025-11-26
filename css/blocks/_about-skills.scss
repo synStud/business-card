@@ -1,0 +1,82 @@
+.skills__wrapper {
+    padding: 2.5rem 7.5rem 3.5rem;
+    flex-direction: column;
+    gap: 3.5rem;
+    width: max-content;
+    margin: 0 auto;
+
+    .skills__container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+        grid-template-areas: 
+            "html     html    css     css      js     js"
+            "git      git     figma   figma    scss   scss"
+            "react    react   bem     bem      linux  linux"
+            "empty-0  docker  docker  eng      eng    empty-1";
+
+        .skill-html {
+            grid-area: html;
+        }
+
+        .skill-css {
+            grid-area: css;
+        }
+
+        .skill-js {
+            grid-area: js;
+        }
+
+        .skill-git {
+            grid-area: git;
+        }
+
+        .skill-figma {
+            grid-area: figma;
+        }
+
+        .skill-scss {
+            grid-area: scss;
+        }
+
+        .skill-react {
+            grid-area: react;
+        }
+
+        .skill-bem {
+            grid-area: bem;
+        }
+
+        .skill-linux {
+            grid-area: linux;
+        }
+
+        .skill-docker {
+            grid-area: docker;
+        }
+
+        .skill-eng {
+            grid-area: eng;
+        }
+
+        .skill {
+            border: 1px solid lightblue;
+            background: rgba(185, 228, 255, 0.3);
+            border-radius: 7px;
+            width: 14rem;
+            text-align: center;
+            padding: 0.5rem 1.5rem;
+            transform: scaleX(0);
+            transition: transform 0.7s;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        .skill.show {
+            transform: scaleX(1);
+        }
+    }
+}

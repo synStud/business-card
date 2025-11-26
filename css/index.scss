@@ -1,0 +1,20 @@
+@import 
+    'variables',
+    'globals';
+
+@import 
+    './blocks/header',
+    './blocks/hero',
+    './blocks/about',
+    './blocks/about-skills',
+    './blocks/about-experience',
+    './blocks/about-education',
+    './blocks/projects',
+    './blocks/contacts',
+    './blocks/footer',
+    './blocks/modal';
+
+@import
+    'font-face',
+    './media/media-tablet',
+    './media/media-mobile';

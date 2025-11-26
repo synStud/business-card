@@ -1,0 +1,66 @@
+.experience__container {
+    padding: 2.5rem 3.5rem 3.5rem;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .experience-past__container {
+        display: flex;
+        gap: 1.5rem;
+
+        .experience-past__content {
+            border: 1px solid lightblue;
+            background: rgba(185, 228, 255, 0.1);
+            border-radius: 7px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            transform: scaleX(0);
+            transition: transform 0.7s;
+
+            p {
+                line-height: 1.3rem;
+                letter-spacing: 0.5px;
+            }
+
+            ul {
+                list-style-type: '\2014';
+                padding-left: 1rem;
+
+                li {
+                    padding-left: 0.5rem;
+                    padding-bottom: 0.15rem;
+                    letter-spacing: -0.25px;
+                }
+            }
+        }
+
+        .experience-past__content.show {
+            transform: scaleX(1);
+        }
+    }
+
+    .experience-present__container {
+        padding: 0 12rem;
+
+        .experience-present__content {
+            border: 1px solid lightblue;
+            background: rgba(185, 228, 255, 0.1);
+            border-radius: 7px;
+            padding: 1.5rem 2rem;
+            transform: scaleY(0);
+            transition: transform 0.7s;
+
+            p {
+                line-height: 1.3rem;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        .experience-present__content.show {
+            transform: scaleY(1);
+        }
+    }
+}

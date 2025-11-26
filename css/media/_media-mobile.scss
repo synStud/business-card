@@ -1,0 +1,566 @@
+@media (max-width: 767px) {
+    // -----------------------------------
+    // ------------- GLOBALS -------------
+    // -----------------------------------
+
+
+
+    body {
+        background: url(../images/metal-5-1.jpg) top left / 200px 200px repeat;
+    }
+
+    .flow-size {
+        max-width: 375px;
+        padding: 0 0.5rem;
+    }
+
+    .h2-wrapper {
+        padding: 0.2rem 4rem;
+        margin-left: 100%;
+        transform: translateX(-100%);
+
+        h2 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .h3-wrapper {
+        padding: 0.15rem 3rem;
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    .h4-inner {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .link-button {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.7rem;
+    }
+
+
+
+    // ----------------------------------
+    // ------------- HEADER -------------
+    // ----------------------------------
+
+
+
+    .nav-panel {
+        left: 0.5rem;
+        transform: translateX(0);
+        padding: 0.2rem 0.6rem;
+        border-radius: 15px;
+
+        .nav__container {
+            padding: 0rem 0rem;
+            width: 1.9rem;
+            height: 1.75rem;
+            margin: 0 auto;
+            transition: width 0.3s;
+
+            .burger-button {
+                width: 1.9em;
+                height: 1.75rem;
+
+                .burger__wrapper {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+
+                    .burger-element {
+                        width: 90%;
+                        height: 5px;
+                        border-radius: 10px;
+                        background-color: rgb(156, 182, 154);
+                        transition: background-color 0.2s, box-shadow 0.2s;
+                    }
+
+                    .burger-element_active {
+                        box-shadow:  0 0px 10px 1px lightgreen;
+                        background-color: rgba(13, 160, 0, 0.85);
+                    }
+                }
+            }
+
+            .burger-button:hover {
+                cursor: pointer;
+            }
+
+            .nav-list {
+                transition: 
+                    height 0.2s,
+                    border-width 0.2s,
+                    box-shadow 0.2s,
+                    background-color 0.5s ease-in;
+                
+                height: 0;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                top: 0.35rem;
+                flex-direction: column;
+                justify-content: space-around;
+                border-bottom-left-radius: 9px;
+                border-bottom-right-radius: 9px;
+                
+                li {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.1s 0.7s;
+
+                    .nav-button {
+
+                        span {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    .nav-panel_active {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+
+        .nav__container {
+            width: 7rem;
+
+            .burger-button {
+
+                .burger__wrapper {
+
+                    .burger-element {
+                        box-shadow:  0 0px 10px 1px lightgreen;
+                        background-color: rgba(13, 160, 0, 0.85);
+                        transition: background-color 0.7s, box-shadow 0.7s;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-panel_opened {
+
+        .nav__container {
+
+            .nav-list {
+                border-width: 0 2px 2px 2px;
+                border-style: solid;
+                border-color: rgb(112, 219, 255);
+                background-color: rgba(255, 255, 255, 0.95);
+                box-shadow:
+                    25px 25px 10px 0px rgba(131, 130, 130, 0.3),
+                    0 0px 10px 0px rgb(112, 219, 255);
+                visibility: visible;
+                height: 9rem;
+
+                li {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+
+
+
+    // --------------------------------
+    // ------------- HERO -------------
+    // --------------------------------
+
+
+
+    .section-hero__wrapper {
+
+        .hero-content__bgimage {
+            background: url(../../images/805201.jpg) 70% 100% / cover no-repeat;
+            height: 290px;
+            min-height: 210px;
+        }
+
+        .hero-content {
+            height: 15rem;
+            gap: 1rem;
+
+            &__h-wrapper {
+                font-size: 1.2rem;
+                height: 4rem;
+            }
+
+            &__name-block, &__introduce-block {
+                width: 15rem;
+                height: auto;
+                font-size: 0.9rem;
+            }
+
+            &__name-block {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+
+
+    // ---------------------------------
+    // ------------- ABOUT -------------
+    // ---------------------------------
+
+
+
+    .section-about__wrapper {
+        padding: 3rem 0.25rem 0;
+        gap: 1.3rem;
+
+        .section-about__anchor {
+            top: -1.3rem;
+        }
+    }
+
+
+
+    // ---------------------------------
+    // ------------- SKILS -------------
+    // ---------------------------------
+
+
+    
+    .skills__wrapper {
+        padding: 0.65rem 1rem 1rem;
+        gap: 1rem;
+
+        .skills__container {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 0.5rem;
+            grid-template-areas:
+                "html     html    css     css"
+                "js       js      git     git"
+                "figma    figma   scss    scss"
+                "react    react   bem     bem"
+                "linux    linux   docker  docker"
+                "empty-0  eng     eng     empty-1";
+
+            .skill {
+                width: 7.5rem;
+                padding: 0.2rem 0.5rem;
+
+                span {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+
+
+
+    // --------------------------------------
+    // ------------- EXPERIENCE -------------
+    // --------------------------------------
+
+
+
+    .experience__container {
+        padding: 0.65rem 1rem 1rem;
+        gap: 1rem;
+
+        .experience-past__container {
+            gap: 0.5rem;
+            flex-direction: column;
+
+            .experience-past__content {
+                width: 100%;
+                padding: 0.75rem 1.3rem;
+                gap: 0.7rem;
+
+                p {
+                    line-height: 1rem;
+                    font-size: 0.7rem;
+                }
+
+                ul {
+
+                    li {
+                        line-height: 0.95rem;
+                        padding-bottom: 0.2rem;
+                        font-size: 0.7rem;
+                        letter-spacing: 0.015rem;
+                    }
+                }
+            }
+        }
+
+        .experience-present__container {
+            padding: 0;
+
+            .experience-present__content {
+                padding: 0.75rem 1.3rem;
+
+                p {
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+    }
+
+
+
+    // -------------------------------------
+    // ------------- EDUCATION -------------
+    // -------------------------------------
+
+
+
+    .education__container {
+        padding: 0.65rem 1rem 1rem;
+        gap: 1.5rem;
+
+        .education-vocational__container, .education-courses__container {
+            gap: 0.5rem;
+
+            .education {
+                padding: 0.75rem 1.3rem;
+                gap: 0.3rem;
+
+                p {
+                    padding-top: 0rem;
+                    font-size: 0.7rem;
+                    
+                }
+
+                p:nth-child(2) {
+                    padding-top: 0.55rem;
+                }
+            }
+        }
+
+        .education-vocational__h-wrapper, .education-courses__h-wrapper {
+            height: 3.5rem;
+            padding: 0.5rem 0.5rem 0 0.5rem;
+
+            h4 {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    // ------------------------------------
+    // ------------- PROJECTS -------------
+    // ------------------------------------
+
+
+
+    .section-projects__wrapper {
+        padding: 3rem 0.25rem 0;
+
+        .section-projects__anchor {
+            top: -1.3rem;
+        }
+
+        .projects__container {
+            padding: 1.3rem 0 0;
+            gap: 1.3rem;
+
+            .project {
+                padding: 1rem;
+                gap: 0.7rem;
+
+                .project-image {
+                    width: 305px;
+                    height: 156px;
+                    min-height: 156px;
+                }
+
+                .project-info {
+
+                    .project-description {
+                        
+                        .h3-wrapper {
+
+                            h3 {
+                                letter-spacing: -0.01rem;
+                            }
+                        }
+
+                        .project-description_content {
+                            font-size: 0.7rem;
+                        }
+                    }
+
+                    .project-techsnlinks__wrapper {
+
+                        .project-techs {
+
+                            ul {
+
+                                li {
+                                    padding: 0.2rem 0.4rem;
+                                    font-size: 0.65rem;
+                                }
+                            }
+                        }
+
+                        .project-links__container {
+                            padding-top: 0.95rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // ------------------------------------
+    // ------------- CONTACTS -------------
+    // ------------------------------------
+
+
+
+    .section-contacts__wrapper {
+        padding: 3rem 0.25rem 0;
+
+        .section-contacts__anchor {
+            top: -1.3rem;
+        }
+
+        .contacts__wrapper {
+            padding-top: 1.3rem;
+
+            .contacts__description {
+                padding: 0.85rem 1rem 1rem;
+
+                .contacts__description_content {
+
+                    h4 {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .contacts__container {
+                    padding: 1rem 0 0;
+                    gap: 1rem;
+                    
+
+                    .contacts {
+                        width: 100%;
+                        
+                        ul {
+                            flex-wrap: wrap;
+                            height: 100%;
+                            gap: 0.7rem;
+
+                            li {
+
+                                .link-button {
+                                    width: 7.5rem;
+                                    font-size: 0.65rem;
+                                }
+                            }
+
+                            li>span {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+
+                    .contacts-form__container {
+                        padding-top: 0.9rem;
+
+                        .contacts-form__description {
+                            font-size: 0.7rem;
+                            padding: 0 1rem 0.7rem;
+                            width: 16rem;
+                            margin: 0 auto;
+                        }
+
+                        .contacts-form {
+
+                            .contacts-form__wrapper {
+                                flex-direction: column;
+                                gap: 0.7rem;
+
+                                .contacts-form__message-block, .contacts-form__submit-block {
+                                    width: 100%;
+                                }
+
+                                .contacts-form__submit-block {
+                                    gap: 1rem;
+                                }
+
+                                .message-label {
+                                    padding-top: 0.7rem;
+                                }
+
+                                .label {
+                                    font-size: 0.7rem;
+                                    padding-bottom: 0.3rem;
+                                }
+
+                                .input, .textarea {
+                                    font-size: 0.7rem;
+                                }
+
+                                .textarea {
+                                    height: 10rem;
+                                }
+
+                                .button__wrapper {
+
+                                    button {
+                                        font-size: 0.7rem;
+                                        padding: 0.3rem 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    // ----------------------------------
+    // ------------- FOOTER -------------
+    // ----------------------------------
+
+
+
+    .footer {
+
+        .footer__wrapper {
+            padding: 3rem 0 0;
+
+            .footer__content {
+
+                .footer__info {
+                    padding: 1.3rem 0 0.3rem;
+                    font-size: 0.6rem;
+                }
+
+                .footer__city {
+                    font-size: 0.6rem;
+                    padding: 0.3rem 0 1rem;
+                }
+            }
+        }
+    }
+}

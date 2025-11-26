@@ -1,0 +1,30 @@
+.footer {
+    padding: 0;
+
+    .footer__wrapper {
+        padding: 7rem 0 0;
+
+        .footer__content {
+            border-top: 2px solid rgb(205, 205, 205);
+            background-color: rgba(0, 10, 99, 0.7);
+            box-shadow: 0px -7px 10px 0px rgb(131, 130, 130);
+
+            .footer__info {
+                padding: 2rem 0 0.5rem;
+                font-size: 0.9rem;
+                color: rgb(190, 190, 190);
+                text-align: center;
+                border-bottom: 1px solid;
+                border-image: linear-gradient(to right, rgba(205, 205, 205, 0), rgb(205, 205, 205) 25%, rgb(205, 205, 205) 75%, rgba(205, 205, 205, 0));
+                border-image-slice: 1;
+            }
+
+            .footer__city {
+                padding: 0.5rem 0 1.5rem;
+                color: rgb(190, 190, 190);
+                text-align: center;
+            }
+        }
+    }
+}
+

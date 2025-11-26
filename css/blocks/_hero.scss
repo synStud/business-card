@@ -1,0 +1,88 @@
+.section-hero__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+
+    .hero-content__bgimage {
+        background: url(../../images/805201.jpg) center / cover no-repeat;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        min-height: 560px;
+    }
+
+    .hero-content {
+        width: 100%;
+        height: 20rem;
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.5rem;
+
+        &__h-wrapper {
+            font-size: 2.5rem;
+            width: 100%;
+            height: 0rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 2px solid;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to right, #ffffff00, rgb(97, 97, 97) 25%, rgb(97, 97, 97) 75%, #ffffff00);
+            border-image-slice: 1;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateX(100%);
+            transition:
+                height 0.3s 0.2s,
+                opacity 0.2s,
+                transform 0.2s;
+
+            h1 {
+                color: #303030;
+                text-shadow: 3px 5px 7px #5c5c5c;
+            }
+        }
+
+        &__h-wrapper.show {
+            opacity: 1;
+            height: 7rem;
+            transform: translateX(0%);
+        }
+
+        &__name-block, &__introduce-block {
+            width: 35rem;
+            height: 2rem;
+            font-size: 1.7em;
+            
+            opacity: 0;
+            
+
+            p {
+                color: #303030;
+                text-shadow: 1px 3px 5px #5c5c5c;
+            }
+        }
+
+        &__name-block {
+            transform: translateX(-150%);
+            transition: 
+                opacity 0.3s 0.4s,
+                transform 0.4s 0.4s;
+        }
+
+        &__introduce-block {
+            transform: translateX(150%);
+            transition: 
+                opacity 0.3s 0.8s,
+                transform 0.4s 0.8s;
+        }
+
+        &__name-block.show, &__introduce-block.show {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+}

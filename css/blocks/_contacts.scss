@@ -1,0 +1,136 @@
+.section-contacts__wrapper {
+    padding: 7rem 2.5rem 0;
+    position: relative;
+
+    .section-contacts__anchor {
+        position: absolute;
+        top: 1rem;
+    }
+
+    .contacts__wrapper {
+        padding-top: 3.5rem;
+
+        .contacts__description {
+            flex-direction: column;
+            padding: 2.5rem 3.5rem 3.5rem;
+
+            .contacts__description_content {
+
+                h4 {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .contacts__container {
+                display: flex;
+                padding: 1.5rem 0 0;
+
+                .contacts {
+                    width: 30%;
+                    
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: center;
+                        gap: 1.5rem;
+
+                        li {
+                            
+                            span {
+                                font-family: "Montserrat", sans-serif;
+                            }
+
+                            .link-button {
+                                width: 12rem;
+                            }
+                        }
+
+                        li>span {
+                            font-weight: 500;
+                            display: block;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                }
+
+                .contacts-form__container {
+                    width: 70%;
+
+                    .contacts-form__description {
+                        font-weight: 500;
+                        padding: 0 1.5rem 1rem;
+                    }
+
+                    .contacts-form {
+
+                        .contacts-form__wrapper {
+                            display: flex;
+                            gap: 1.5rem;
+
+                            .contacts-form__message-block, .contacts-form__submit-block {
+                                width: 50%;
+                                display: flex;
+                                flex-direction: column;
+                            }
+
+                            .contacts-form__submit-block {
+                                gap: 2.5rem;
+                            }
+
+                            .name-input__wrapper {
+                                display: flex;
+                                flex-direction: column;
+                            }
+
+                            .label {
+                                padding-bottom: 0.5rem;
+                            }
+
+                            .message-label {
+                                padding-top: 1rem;
+                            }
+
+                            .input, .textarea {
+                                font-size: 1rem;
+                                padding: 0.3rem;
+                                border-width: 0 0 1px 0;
+                                border-style: solid;
+                                border-image: linear-gradient(to right, #ffffff00, rgb(97, 97, 97) 25%, rgb(97, 97, 97) 75%, #ffffff00);
+                                border-image-slice: 1;
+                                background: rgba(185, 228, 255, 0.2);
+                                border-radius: 9px;
+                            }
+
+                            .input:focus, .textarea:focus {
+                                outline: none;
+                                border-width: 0 0 1px 0;
+                                border-style: solid;
+                                border-image: linear-gradient(to right, rgba(173, 216, 230, 0), rgb(112, 219, 255) 15%, rgb(112, 219, 255) 85%, rgba(173, 216, 230, 0));
+                                border-image-slice: 1;
+                                background: rgba(185, 228, 255, 0.3);
+                            }
+
+                            .textarea {
+                                resize: none;
+                                height: 12.5rem;
+                            }
+
+                            .button__wrapper {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                button {
+                                    border: none;
+                                    font-size: 1rem;
+                                    padding: 0.5rem 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

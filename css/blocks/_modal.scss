@@ -1,0 +1,68 @@
+.modal__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: scale(0);
+    transition: transform 0.3s;
+
+    .modal__container {
+        width: 100%;
+        height: 100%;
+        padding: 3.5rem 1.5rem;
+
+        .modal {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 9px;
+            box-shadow:
+                1px 1px 0px 1px rgb(143, 143, 143),
+                1px 2px 0px 1px rgb(143, 143, 143),
+                inset 1px 1px 0px 1px rgba(119, 119, 119, 0.3),
+                5px 5px 10px 0px rgb(131, 130, 130);
+
+            width: 100%;
+            height: 100%;
+            z-index: 110;
+            position: relative;
+            padding: 0 1rem;
+
+            .modal__project-image {
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .cross-button {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px 3px rgb(255, 255, 255);
+                background: rgba(255, 255, 255, 0.7) url(../images/cross.png) center / contain no-repeat;
+                cursor: pointer;
+                top: 0.6rem;
+                right: 0.7rem;
+                transition:
+                    box-shadow 0.3s,
+                    background-color 0.3s,
+                    transform 0.3s;
+            }
+
+            .cross-button:hover {
+                box-shadow: 0 0 10px 3px rgba(255, 0, 0, 0.3);
+                background-color: rgba(255, 0, 0, 0.2);
+                transform: scale(1.09);
+            }
+        }
+    }
+}
+
+.modal__overlay.turned-on {
+    transform: scale(1);
+}
+

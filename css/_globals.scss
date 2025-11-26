@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, span, .input::placeholder, .textarea::placeholder, button {
+    font-family: "Jura", sans-serif;
+}
+
+p, li, label, input, textarea {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: url(../images/metal-5-1.jpg) top left / 800px 800px repeat;
+    width: 100%;
+}
+
+.h2-wrapper, .h3-wrapper, .h4-inner {
+    border-image: linear-gradient(to right, rgba(97, 97, 97, 0), rgb(97, 97, 97) 25%, rgb(97, 97, 97) 75%, rgba(97, 97, 97, 0));
+    border-image-slice: 1;
+}
+
+.h2-wrapper {
+    width: max-content;
+    padding: 0.5rem 10rem;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+
+    h2 {
+        color: #303030;
+        text-shadow: 2px 3px 5px #5c5c5c;
+        font-size: 2rem;
+    }
+}
+
+.h3-wrapper {
+    text-align: center;
+    width: max-content;
+    padding: 0.5rem 5rem;
+    border-bottom: 2px solid;
+
+    h3 {
+        color: #303030;
+        text-shadow: 2px 2px 5px #5c5c5c;
+        font-size: 1.7rem;
+    }
+}
+
+.h4-inner {
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.5px;
+    border-bottom: 1px solid;
+    text-align: center;
+    line-height: 1.2rem;
+ }
+
+.flow-size {
+    max-width: 1440px;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.content-block {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 9px;
+    box-shadow:
+        1px 1px 0px 1px rgb(143, 143, 143),
+        1px 2px 0px 1px rgb(143, 143, 143),
+        inset 1px 1px 0px 1px rgba(119, 119, 119, 0.3),
+        5px 5px 10px 0px rgb(131, 130, 130);
+
+    display: flex;
+    align-items: center;
+}
+
+.link-button {
+    background-color: rgb(9, 109, 0);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.link-button:hover {
+    background-color: rgba(9, 109, 0, 0.85);
+    box-shadow:  0 0px 10px 1px lightgreen;
+}
+
+.link-button:active {
+    background-color: rgba(13, 160, 0, 0.85);
+    box-shadow:  0 0px 10px 1px rgb(0, 255, 0);
+}
+
+.span-link {
+    color: rgb(9, 109, 0);
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+}
