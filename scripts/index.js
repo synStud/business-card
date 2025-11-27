@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', event => {
             const modal = document.querySelector('.modal')
 
             modalOverlay.classList.add('turned-on')
-            imageBlock.style.backgroundImage = `url(../../images/${targetImage})`
+            imageBlock.style.backgroundImage = `url(./images/${targetImage})`
 
             crossButton.addEventListener('click', function (event) {
                 modalOverlay.classList.remove('turned-on')
